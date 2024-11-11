@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Saya</title>
+    <link rel="manifest" href="/manifest.json">
+    <style>
+        
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .profile-container {
+            width: 100%;
+            max-width: 600px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        p.description {
+            font-size: 16px;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .contact-info {
+            font-size: 16px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-info a {
+            color: #1a73e8;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .social-links a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: #333;
+            font-size: 18px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .social-links a:hover {
+            background-color: #1a73e8;
+            color: #fff;
+        }
+
+        .notification-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        .subscribe-btn {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        .subscribe-btn:hover {
+            background-color: #155ab6;
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 20px;
+            }
+            .profile-image {
+                width: 120px;
+                height: 120px;
+            }
+            p.description, .contact-info {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <img src="profile-picture.jpg" alt="Foto Profil" class="profile-image">
+        <h1>Muhammad Firman Adi Wiyogo</h1>
+        <p class="description">Saya seorang mahasiswa berusia 20 tahun yang tinggal di Dukuhwaru. Saat ini, saya menempuh pendidikan di STMIK YMI Tegal, jurusan Teknik Informatika, dan berada di semester 5.
+
+            Saya memiliki minat yang besar terhadap desain grafis dan fotografi, yang berakar dari latar belakang saya sebagai lulusan jurusan multimedia. Keduanya memberikan saya kesempatan untuk mengekspresikan kreativitas dan melihat dunia dengan cara yang berbeda. Selain itu, saya juga tertarik pada coding karena saya menyadari potensi kerja yang luas di bidang ini, yang memungkinkan saya untuk berkontribusi dalam berbagai proyek teknologi.
+            
+            Dengan kombinasi minat ini, saya berusaha untuk mengembangkan keterampilan yang dapat bermanfaat baik dalam dunia profesional maupun dalam proyek pribadi di masa depan.</p>
+
+        <div class="contact-info">
+            <p>Email: <a href="https://accounts.google.com/signin/v2/identifier?hl=id&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">22205058@mhs.stmik-tegal.ac.id</a></p>
+            <p>Telepon: <a href="tel:+6282313700447">+62 823-1370-0447</a></p>
+        </div>
+
+        <div class="social-links">
+            <a href="https://www.facebook.com/wakubil.keren/" target="_blank" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook" style="width: 32px; height: 32px;"></a></a>
+            <a href="https://www.instagram.com/pyrmann_/" target="_blank" aria-label="Instagram"><img src="logo ig.jpg" alt="Facebook" style="width: 32px; height: 32px;"></a></a>
+        </div>
+
+        <div class="notification-container">
+            <button id="subscribe-btn" class="subscribe-btn">Aktifkan Notifikasi</button>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
