@@ -6,7 +6,6 @@
     <title>Profil Saya</title>
     <link rel="manifest" href="/manifest.json">
     <style>
-        
         * {
             box-sizing: border-box;
             margin: 0;
@@ -67,30 +66,6 @@
         .contact-info a:hover {
             text-decoration: underline;
         }
-        </style>
-</head>
-<body>
-    <section id="skills">
-        <h2>Presentasi Keahlian</h2>
-        <div class="skill">
-            <span>CSS</span>
-            <div class="bar" style="width: 80%;"></div>
-            <span>80%</span>
-        </div>
-        <div class="skill">
-            <span>JavaScript</span>
-            <div class="bar" style="width: 70%;"></div>
-            <span>70%</span>
-        </div>
-        <div class="skill">
-            <span>HTML</span>
-            <div class="bar" style="width: 90%;"></div>
-            <span>90%</span>
-        </div>
-        <div class="skill">
-            <span>Public Speaking</span>
-            <div class="bar" style="width: 60%;"></div>
-            <span>60%</span>
 
         .social-links {
             display: flex;
@@ -138,6 +113,50 @@
             background-color: #155ab6;
         }
 
+        .skills-section {
+            text-align: left;
+            margin-top: 20px;
+        }
+
+        .skills-section h2 {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .skill {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        .skill span {
+            width: 100px;
+        }
+
+        .bar {
+            flex: 1;
+            height: 10px;
+            background-color: #ddd;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: #1a73e8;
+        }
+
+        .bar[data-width="80%"]::after { width: 80%; }
+        .bar[data-width="70%"]::after { width: 70%; }
+        .bar[data-width="90%"]::after { width: 90%; }
+        .bar[data-width="60%"]::after { width: 60%; }
+
         @media (max-width: 600px) {
             h1 {
                 font-size: 20px;
@@ -163,20 +182,45 @@
             Dengan kombinasi minat ini, saya berusaha untuk mengembangkan keterampilan yang dapat bermanfaat baik dalam dunia profesional maupun dalam proyek pribadi di masa depan.</p>
 
         <div class="contact-info">
-            <p>Email: <a href="https://accounts.google.com/signin/v2/identifier?hl=id&service=mail&flowName=GlifWebSignIn&flowEntry=ServiceLogin">22205058@mhs.stmik-tegal.ac.id</a></p>
+            <p>Email: <a href="mailto:22205058@mhs.stmik-tegal.ac.id">22205058@mhs.stmik-tegal.ac.id</a></p>
             <p>Telepon: <a href="tel:+6282313700447">+62 823-1370-0447</a></p>
         </div>
 
         <div class="social-links">
-            <a href="https://www.facebook.com/wakubil.keren/" target="_blank" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook" style="width: 32px; height: 32px;"></a></a>
-            <a href="https://www.instagram.com/pyrmann_/" target="_blank" aria-label="Instagram"><img src="logo ig.jpg" alt="Facebook" style="width: 32px; height: 32px;"></a></a>
+            <a href="https://www.facebook.com/wakubil.keren/" target="_blank" aria-label="Facebook"><img src="facebook-logo.png" alt="Facebook" style="width: 32px; height: 32px;"></a>
+            <a href="https://www.instagram.com/pyrmann_/" target="_blank" aria-label="Instagram"><img src="logo-ig.jpg" alt="Instagram" style="width: 32px; height: 32px;"></a>
         </div>
 
         <div class="notification-container">
             <button id="subscribe-btn" class="subscribe-btn">Aktifkan Notifikasi</button>
+        </div>
+
+        <div class="skills-section">
+            <h2>Presentasi Keahlian</h2>
+            <div class="skill">
+                <span>CSS</span>
+                <div class="bar" data-width="80%"></div>
+                <span>80%</span>
+            </div>
+            <div class="skill">
+                <span>JavaScript</span>
+                <div class="bar" data-width="70%"></div>
+                <span>70%</span>
+            </div>
+            <div class="skill">
+                <span>HTML</span>
+                <div class="bar" data-width="90%"></div>
+                <span>90%</span>
+            </div>
+            <div class="skill">
+                <span>Public Speaking</span>
+                <div class="bar" data-width="60%"></div>
+                <span>60%</span>
+            </div>
         </div>
     </div>
 
     <script src="main.js"></script>
 </body>
 </html>
+
