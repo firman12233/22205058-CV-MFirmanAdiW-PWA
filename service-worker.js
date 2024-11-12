@@ -9,10 +9,9 @@ self.addEventListener('push', function(event) {
     );
 });
 
-// Menangani klik pada notifikasi
 self.addEventListener('notificationclick', function(event) {
     event.notification.close();
     event.waitUntil(
-        clients.openWindow('https://your-website-url.com') // Arahkan ke URL atau halaman yang sesuai
+        clients.openWindow('https://web-profil-firman.vercel.app/') 
     );
 });
